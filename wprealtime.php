@@ -6,7 +6,8 @@ Plugin URI: http://github.com/ashfame/wprealtime
 Description: Realtime goodies
 Version: 0.1
 Author: Ashfame
-Author URI: http://automattic.com/wordpress-plugins/
+Author URI: http://blog.ashfame.com/
+License: GPLv2
 */
 
 /**
@@ -42,7 +43,7 @@ function wprealtime_ajax_handler() {
 	$result['count']['categories'] = wp_count_terms('category');
 	$result['count']['tags'] = wp_count_terms('post_tag');
 	$result['count']['comments'] = wp_count_comments();
-	
+
 	echo json_encode( $result );
 	die();
 }
